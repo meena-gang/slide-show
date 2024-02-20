@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <style>
+        #slide-show-container{
+            width: 1000px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+            max-height: 50%;
+        }
+        .numberText{
+            position: absolute;
+            padding: 8px 12px;
+            color: white;
+            font-size: 16px;
+        }
+        .mySlides{
+            margin: 10px;
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+        }
+        .dot{
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            display: none;
+        }
+        .active {
+        background-color: #717171;
+        }
+        #btns{
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 60px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">Start</button>
+    <div id="slide-show-container">
+    <div class="mySlides fade">
+        <div class="numberText">1 / 20</div>
+        <img src="assets/image1.jpeg" alt="img1" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">2 / 20</div>
+        <img src="assets/image2.jpeg" alt="img2" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">3 / 20</div>
+        <img src="assets/image3.jpeg" alt="img3" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">4 / 20</div>
+        <img src="assets/image4.jpeg" alt="img4" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">5 / 20</div>
+        <img src="assets/image5.jpeg" alt="img5" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">6 / 20</div>
+        <img src="assets/image6.jpeg" alt="img6" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">7 / 20</div>
+        <img src="assets/image7.jpeg" alt="img7" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">8 / 20</div>
+        <img src="assets/image8.jpeg" alt="img8" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">9 / 20</div>
+        <img src="assets/image9.jpeg" alt="img9" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">10 / 20</div>
+        <img src="assets/image10.jpeg" alt="img10" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">11 / 20</div>
+        <img src="assets/image11.jpeg" alt="img11" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">12 / 20</div>
+        <img src="assets/image12.jpeg" alt="img12" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">13 / 20</div>
+        <img src="assets/image13.jpeg" alt="img13" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">14 / 20</div>
+        <img src="assets/image14.jpeg" alt="img14" width="100%" height="100%">
+    </div>
+   <div class="mySlides fade">
+        <div class="numberText">15 / 20</div>
+        <img src="assets/image15.jpeg" alt="img15" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">16 / 20</div>
+        <img src="assets/image16.jpeg" alt="img16" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">17 / 20</div>
+        <img src="assets/image17.jpeg" alt="img17" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">18 / 20</div>
+        <img src="assets/image18.jpeg" alt="img18" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">19 / 20</div>
+        <img src="assets/image19.jpeg" alt="img19" width="100%" height="100%">
+    </div>
+    <div class="mySlides fade">
+        <div class="numberText">20 / 20</div>
+        <img src="assets/image20.jpeg" alt="img20" width="100%" height="100%">
+    </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+    <div id="btns">
+    <button id="prev">Previous</button>
+    <button id="nxt">Next</button>
+    </div>
+</body>
+<script>
+    let i;
+    let slideIndex = 0;
+    let id;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    let btn = document.getElementById("btn");
+    btn.addEventListener('click',slideShow);
+    let prev = document.getElementById('prev');
+    let nxt = document.getElementById('nxt');
+    prev.addEventListener('click',prevSlide);
+    nxt.addEventListener('click',nxtSlide);
+    
+    function prevSlide(){
+        clearTimeout(id);
+        slides[slideIndex-1].style.display = 'none';
+        slides[slideIndex-2].style.display = 'block';
+        dots[slideIndex-1].className = dots[slideIndex-1].className.replace("active","");
+        dots[slideIndex-2].className += " active";
+        slideIndex--;
+
+    }
+    function nxtSlide(){
+        clearTimeout(id);
+        slides[slideIndex-1].style.display = 'none';
+        slides[slideIndex].style.display = 'block';
+        dots[slideIndex-1].className = dots[slideIndex-1].className.replace("active","");
+        dots[slideIndex].className += " active";
+        slideIndex++;
+    }
+
+    function slideShow(){
+    
+    for(i = 0; i < slides.length; i++){
+       slides[i].style.display = 'none';
+    }
+    slideIndex++;
+    if(slideIndex > slides.length){
+        slideIndex = 1;
+    }
+    for(i = 0; i < dots.length; i++){
+       dots[i].style.display = 'inline-block';
+       dots[i].className = dots[i].className.replace("active","");
+    }
+    slides[slideIndex-1].style.display = 'block';
+    
+    dots[slideIndex-1].className += " active";
+    btn.textContent = "Stop";
+    btn.removeEventListener('click',slideShow);
+    btn.addEventListener('click',stopShow);
+    function stopShow(){
+        clearTimeout(id);
+        btn.textContent = "Start";
+        btn.removeEventListener('click',stopShow);
+        btn.addEventListener('click',slideShow);
+    }
+     id = setTimeout(slideShow,2000);
+    
+    }
+</script>
+</html>
